@@ -51,6 +51,10 @@ Creating an EKS Cluster
 
     `eksctl get cluster --name demo-eks --region us-east-2`
 
+       <div align="center"> 
+         <img src="./Assets/SS-1.png" alt="screenshot" />
+             </div>
+
 ### Connecting to the EKS Cluster
 
 1.  Use `kubectl` to interact with the cluster:
