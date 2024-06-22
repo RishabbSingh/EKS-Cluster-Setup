@@ -23,13 +23,9 @@ Pre-requisites
 
 1.  Install the AWS CLI.
 2.  Configure the AWS CLI with your credentials:
-
-    sh
-
-    Copy code
-
+    
     `aws configure`
-
+    
     You will be prompted for:
     -   Access key
     -   Secret access key
@@ -42,10 +38,6 @@ Creating an EKS Cluster
 1.  Install `eksctl` following the instructions from the eksctl documentation.
 2.  Create an EKS cluster using the following command:
 
-    sh
-
-    Copy code
-
     `eksctl create cluster --name demo-eks --region us-east-2 --nodegroup-name my-nodes --node-type t3.small --managed --nodes 2`
 
     This command creates an EKS cluster, which might take 15 to 20 minutes. `eksctl` uses CloudFormation under the hood, creating one stack for the EKS master control plane and another stack for the worker nodes.
@@ -54,19 +46,11 @@ Creating an EKS Cluster
 
 1.  Verify the cluster creation:
 
-    sh
-
-    Copy code
-
     `eksctl get cluster --name demo-eks --region us-east-2`
 
 ### Connecting to the EKS Cluster
 
 1.  Use `kubectl` to interact with the cluster:
-
-    sh
-
-    Copy code
 
     `kubectl get nodes
     kubectl get ns`
@@ -76,17 +60,9 @@ Deploying Nginx on the Kubernetes Cluster
 
 1.  Create an Nginx deployment:
 
-    sh
-
-    Copy code
-
     `kubectl create deployment nginx --image=nginx`
 
 2.  View the deployments:
-
-    sh
-
-    Copy code
 
     `kubectl get deployments`
 
@@ -94,10 +70,6 @@ Deleting the EKS Cluster
 ------------------------
 
 1.  Delete the EKS cluster:
-
-    sh
-
-    Copy code
 
     `eksctl delete cluster --name demo-eks --region us-east-2`
 
