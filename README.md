@@ -1,6 +1,6 @@
-# Setting-up-Prometheus-and-Grafana-in-EKS-Cluster
+
 EKS Cluster Setup Guide
-=======================
+
 
 Amazon Elastic Kubernetes Service (EKS) is a fully managed container orchestration service provided by AWS. It simplifies the deployment and management of containerized applications by taking care of the Kubernetes control plane while you manage the worker nodes. This guide will walk you through setting up an EKS cluster, deploying a sample application, and setting up monitoring with Prometheus and Grafana.
 
